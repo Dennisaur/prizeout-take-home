@@ -6,6 +6,40 @@
 	&__brand {
 		overflow: auto;
 	}
+
+	&__redemption-amount {
+		h5 {
+			margin-top: var(--space-l);
+			margin-bottom: var(--space-m);
+			color: var(--color-grey-900);
+		}
+
+		.redemption-amount-list {
+			display: grid;
+			grid-auto-flow: row;
+			gap: var(--space-xs);
+
+			> .button {
+				flex: 1;
+				padding: .75rem .5rem;
+			}
+		}
+
+		.redemption-details {
+			margin: var(--space-primary) auto;
+			font-weight: bold;
+			font-size: var(--font-size-s);
+			border: 1px solid var(--color-grey-400);
+			border-radius: var(--border-radius-primary);
+			padding: 1rem;
+			gap: var(--space);
+			color: var(--color-grey-900);
+
+			.color--primary {
+				color: var(--color-primary);
+			}
+		}
+	}
 }
 
 

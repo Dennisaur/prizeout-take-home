@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Classnames from 'classnames';
 import { PrizeoutOffer, PrizeoutOfferSettings } from '../../../../../slices/offers-slice';
 import { OfferGiftCard } from '../offer-gift-card/offer-gift-card';
@@ -6,7 +6,7 @@ import { useAppSelector } from '../../../../../hooks';
 import { selectIsCheckoutPanelCollapsed } from '../../../../../slices/common-slice';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../../../../store';
-import { toggleIsCollapsedCheckoutPanelOpen } from '../../../../../slices/checkout-slice';
+import { toggleIsCollapsedCheckoutPanelOpen, selectOffer } from '../../../../../slices/checkout-slice';
 
 import './vertical-offers.less';
 
@@ -21,10 +21,15 @@ const VerticalOffers: React.FC<OfferView> = ({ offers, viewSettings }): React.Re
     const classes: string = Classnames('vertical-offers');
     const dispatch = useDispatch<AppDispatch>();
 
+    useEffect(() => {
+        dispatch(selectOffer(offers[0] || null));
+    }, []);
+
     const offerClickHandler = (offer: PrizeoutOffer) => {
         if (isCheckoutPanelCollapsedView) {
             dispatch(toggleIsCollapsedCheckoutPanelOpen());
         }
+        dispatch(selectOffer(offer));
     };
 
     const returnOffers = () => {
