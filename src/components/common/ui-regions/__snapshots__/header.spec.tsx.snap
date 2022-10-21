@@ -3,58 +3,11 @@
 exports[`Test Header Component Component matches snapshot 1`] = `
 <DocumentFragment>
   <header
-    class="header z-index-header"
+    class="header"
   >
-    <div
-      class="header__exit"
-    >
-      <button
-        type="button"
-      >
-        <i
-          class="far fa-sign-out fa-flip-horizontal"
-        />
-        <span>
-          Exit
-        </span>
-      </button>
-    </div>
     <div
       class="header__logo"
     />
-    <div
-      class="header__user"
-    >
-      <div
-        class="header__quick-links"
-      >
-        <a
-          href=""
-        >
-          My Giftcards
-        </a>
-        <a
-          href=""
-        >
-          My Points
-        </a>
-      </div>
-      <nav
-        class="header__nav"
-      >
-        <button
-          aria-label="Toggle"
-          class="button button--primary button--small"
-          data-testid="button"
-          title="Toggle"
-          type="button"
-        >
-          <span>
-            Toggle
-          </span>
-        </button>
-      </nav>
-    </div>
   </header>
 </DocumentFragment>
 `;

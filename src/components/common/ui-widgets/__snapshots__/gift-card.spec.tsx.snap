@@ -24,13 +24,15 @@ exports[`Test Gift Card Component Component matches snapshot 1`] = `
     <div
       class="gift-card__row"
     >
-      <span
-        class="gift-card-name"
+      <p
+        class="gift-card__name"
       >
-        Default Giftcard
-      </span>
+        <strong>
+          Default Giftcard
+        </strong>
+      </p>
       <span
-        class="gift-card-value"
+        class="gift-card__value"
       >
         50
       </span>
